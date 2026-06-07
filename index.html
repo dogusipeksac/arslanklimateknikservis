@@ -2,10 +2,979 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Arslan Klima Teknik Servis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arslan Klima Teknik Servis | Adana Klima Montaj, Bakım ve Tamir</title>
+  <meta name="description" content="Arslan Klima Teknik Servis – Adana'da klima montajı, bakımı, tamiri ve gaz dolumu. Tüm marka klimalar için 7/24 profesyonel teknik servis hizmeti.">
+  <meta name="keywords" content="klima servisi, klima tamiri, klima montajı, klima bakımı, gaz dolumu, Adana klima servisi, Arslan Klima">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arslanklimateknikservis.com/">
+  <meta property="og:title" content="Arslan Klima Teknik Servis">
+  <meta property="og:description" content="Adana'nın güvenilir klima teknik servisi. Montaj, bakım, tamir ve gaz dolumu.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arslanklimateknikservis.com/">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0b6e9e;
+      --primary-dark: #084d6e;
+      --accent: #00b4d8;
+      --accent-light: #90e0ef;
+      --dark: #1a2b3c;
+      --gray: #5a6a7a;
+      --light: #f0f7fb;
+      --white: #ffffff;
+      --shadow: 0 4px 24px rgba(11, 110, 158, 0.12);
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(11, 110, 158, 0.1);
+      transition: box-shadow 0.3s;
+    }
+
+    header.scrolled { box-shadow: var(--shadow); }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.3rem;
+    }
+
+    nav { display: flex; align-items: center; gap: 28px; }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--primary); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: 0 4px 16px rgba(11, 110, 158, 0.35);
+    }
+
+    .btn-primary:hover { box-shadow: 0 6px 24px rgba(11, 110, 158, 0.45); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover { background: var(--light); }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--primary);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 140px 0 80px;
+      background: linear-gradient(160deg, #e8f4fa 0%, #d0ecf7 40%, #f0f7fb 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 180, 216, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(11, 110, 158, 0.1);
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: var(--primary); }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--gray);
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 48px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.8rem;
+      color: var(--primary);
+    }
+
+    .stat span { font-size: 0.85rem; color: var(--gray); }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      max-width: 360px;
+    }
+
+    .hero-card-icon {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 24px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .hero-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .hero-card p { color: var(--gray); font-size: 0.95rem; }
+
+    .hero-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+      text-align: left;
+    }
+
+    .hero-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--dark);
+    }
+
+    .hero-feature::before {
+      content: '✓';
+      background: var(--accent-light);
+      color: var(--primary);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* Sections */
+    section { padding: 80px 0; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-header .label {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      color: var(--gray);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* Services */
+    .services { background: var(--light); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(11, 110, 158, 0.06);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(11, 110, 158, 0.18);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+
+    .service-card p {
+      color: var(--gray);
+      font-size: 0.92rem;
+    }
+
+    /* Why Us */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .why-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--dark);
+    }
+
+    .why-content > p {
+      color: var(--gray);
+      margin-bottom: 32px;
+    }
+
+    .why-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+
+    .why-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .why-item-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .why-item h4 { font-size: 1rem; margin-bottom: 4px; }
+    .why-item p { font-size: 0.9rem; color: var(--gray); }
+
+    .why-visual {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 20px;
+      padding: 48px;
+      color: white;
+      text-align: center;
+    }
+
+    .why-visual h3 { font-size: 1.6rem; margin-bottom: 16px; }
+    .why-visual p { opacity: 0.9; margin-bottom: 32px; font-size: 1rem; }
+
+    .brands {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .brand-tag {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Process */
+    .process { background: var(--light); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 auto 20px;
+    }
+
+    .step h4 { font-size: 1rem; margin-bottom: 8px; }
+    .step p { font-size: 0.88rem; color: var(--gray); }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+      text-align: center;
+      padding: 72px 0;
+    }
+
+    .cta h2 { font-size: 2rem; margin-bottom: 16px; }
+    .cta p { opacity: 0.9; margin-bottom: 32px; font-size: 1.1rem; }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .cta .btn-outline {
+      border-color: white;
+      color: white;
+    }
+
+    .cta .btn-outline:hover { background: rgba(255, 255, 255, 0.15); }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 24px; }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact-item-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item h4 { font-size: 0.95rem; margin-bottom: 4px; color: var(--gray); }
+    .contact-item p, .contact-item a { font-size: 1.05rem; font-weight: 500; color: var(--dark); }
+    .contact-item a:hover { color: var(--primary); }
+
+    .contact-temp-notice {
+      background: #fff8e6;
+      border: 1px solid #f0d78c;
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      margin-bottom: 28px;
+      font-size: 0.9rem;
+      color: #7a5c00;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .temp-badge {
+      display: inline-block;
+      background: #fff3cd;
+      color: #856404;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 50px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .contact-map {
+      background: var(--light);
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(11, 110, 158, 0.1);
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 48px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand .logo { color: white; margin-bottom: 16px; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.7; }
+
+    .footer-links h4 {
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { font-size: 0.9rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent-light); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      z-index: 99;
+      transition: transform 0.2s;
+    }
+
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-visual { order: -1; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+
+    @media (max-width: 640px) {
+      nav { display: none; }
+      nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        gap: 16px;
+      }
+      .menu-toggle { display: block; }
+      .services-grid, .process-steps { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero { padding: 120px 0 60px; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero-stats { gap: 24px; }
+      section { padding: 60px 0; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Arslan Klima Teknik Servis</h1>
-  <p>Adana'in güvenilir klima servisi</p>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">❄</div>
+        <span>Arslan Klima Teknik Servis</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menü">☰</button>
+      <nav id="nav">
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#surec">Süreç</a>
+        <a href="#iletisim">İletişim</a>
+        <a href="tel:+905522468299" class="btn btn-primary">📞 Hemen Ara</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="hero-badge">Adana'nın Güvenilir Klima Servisi</span>
+        <h1>Profesyonel <span>Klima Teknik Servis</span> Hizmeti</h1>
+        <p>Arslan Klima Teknik Servis olarak tüm marka ve modellerde klima montajı, bakımı, tamiri ve gaz dolumu hizmeti sunuyoruz. Uzman ekibimizle 7/24 yanınızdayız.</p>
+        <div class="hero-buttons">
+          <a href="tel:+905522468299" class="btn btn-primary">📞 0552 246 82 99</a>
+          <a href="https://wa.me/905522468299" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>10+</strong>
+            <span>Yıllık Deneyim</span>
+          </div>
+          <div class="stat">
+            <strong>5000+</strong>
+            <span>Mutlu Müşteri</span>
+          </div>
+          <div class="stat">
+            <strong>7/24</strong>
+            <span>Hizmet</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-icon">🌡️</div>
+          <h3>Ücretsiz Keşif & Fiyat</h3>
+          <p>Adresinize gelerek ücretsiz keşif yapıyor, şeffaf fiyat teklifi sunuyoruz.</p>
+          <div class="hero-features">
+            <div class="hero-feature">Aynı gün servis imkânı</div>
+            <div class="hero-feature">Orijinal yedek parça garantisi</div>
+            <div class="hero-feature">İşçilik garantisi</div>
+            <div class="hero-feature">Tüm marka klimalar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="hizmetler">
+    <div class="container">
+      <div class="section-header">
+        <div class="label">Hizmetlerimiz</div>
+        <h2>Klima Teknik Servis Hizmetleri</h2>
+        <p>Ev ve iş yerleriniz için kapsamlı klima çözümleri sunuyoruz. Her ihtiyaca özel profesyonel hizmet.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Klima Montajı</h3>
+          <p>Split, multi split ve salon tipi klima montajı. Duvar delme, borulama ve elektrik bağlantısı dahil profesyonel kurulum.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛠️</div>
+          <h3>Klima Tamiri</h3>
+          <p>Soğutmama, ses yapma, su damlatma, kumanda arızası ve tüm teknik sorunlara hızlı ve kalıcı çözüm.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧹</div>
+          <h3>Klima Bakımı</h3>
+          <p>Filtre temizliği, iç ve dış ünite bakımı, dezenfeksiyon. Düzenli bakım ile klimanızın ömrünü uzatın.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💨</div>
+          <h3>Gaz Dolumu</h3>
+          <p>R410A, R32 ve diğer soğutucu gaz türlerinde profesyonel gaz dolumu ve kaçak tespiti hizmeti.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>VRV / VRF Sistemleri</h3>
+          <p>Merkezi klima sistemleri, VRV/VRF montaj, bakım ve arıza giderme. Ticari ve endüstriyel çözümler.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Klima Sökme & Taşıma</h3>
+          <p>Taşınma veya tadilat durumlarında güvenli klima sökme, nakliye ve yeniden montaj hizmeti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section id="hakkimizda">
+    <div class="container why-grid">
+      <div class="why-content">
+        <h2>Neden Arslan Klima Teknik Servis?</h2>
+        <p>Adana ve çevresinde yılların deneyimiyle klima sektöründe güvenilir bir isim olarak hizmet veriyoruz. Müşteri memnuniyeti odaklı çalışma anlayışımızla her projede en yüksek kaliteyi hedefliyoruz.</p>
+        <ul class="why-list">
+          <li class="why-item">
+            <div class="why-item-icon">👨‍🔧</div>
+            <div>
+              <h4>Uzman Teknik Ekip</h4>
+              <p>Sertifikalı ve deneyimli teknisyenlerimizle her marka klimalara profesyonel müdahale.</p>
+            </div>
+          </li>
+          <li class="why-item">
+            <div class="why-item-icon">💰</div>
+            <div>
+              <h4>Uygun Fiyat Garantisi</h4>
+              <p>Şeffaf fiyatlandırma, gizli maliyet yok. İş öncesi net fiyat teklifi sunuyoruz.</p>
+            </div>
+          </li>
+          <li class="why-item">
+            <div class="why-item-icon">⚡</div>
+            <div>
+              <h4>Hızlı Müdahale</h4>
+              <p>Acil arıza durumlarında aynı gün servis. Randevulu işlerde zamanında geliş garantisi.</p>
+            </div>
+          </li>
+          <li class="why-item">
+            <div class="why-item-icon">✅</div>
+            <div>
+              <h4>Garanti & Güvence</h4>
+              <p>Tüm işçilik ve yedek parçalarda garanti. Memnun kalmazsanız ücretsiz tekrar müdahale.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="why-visual">
+        <h3>Tüm Marka Klimalar</h3>
+        <p>Her marka ve modelde uzman servis hizmeti veriyoruz.</p>
+        <div class="brands">
+          <span class="brand-tag">Arçelik</span>
+          <span class="brand-tag">Beko</span>
+          <span class="brand-tag">Samsung</span>
+          <span class="brand-tag">LG</span>
+          <span class="brand-tag">Daikin</span>
+          <span class="brand-tag">Mitsubishi</span>
+          <span class="brand-tag">Vestel</span>
+          <span class="brand-tag">Airfel</span>
+          <span class="brand-tag">Baymak</span>
+          <span class="brand-tag">Demirdöküm</span>
+          <span class="brand-tag">Fujitsu</span>
+          <span class="brand-tag">Carrier</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process" id="surec">
+    <div class="container">
+      <div class="section-header">
+        <div class="label">Nasıl Çalışıyoruz</div>
+        <h2>4 Adımda Klima Servisi</h2>
+        <p>Basit ve şeffaf sürecimizle klimanız kısa sürede sorunsuz çalışır hale gelir.</p>
+      </div>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>İletişime Geçin</h4>
+          <p>Telefon veya WhatsApp ile bize ulaşın, sorununuzu kısaca anlatın.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Keşif & Teklif</h4>
+          <p>Adresinize gelerek ücretsiz keşif yapar, net fiyat teklifi sunarız.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Profesyonel Müdahale</h4>
+          <p>Uzman ekibimiz belirlenen zamanda gelir ve işlemi titizlikle tamamlar.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Test & Garanti</h4>
+          <p>Klimanız test edilir, işçilik garantisi ile teslim edilir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Klimanız Arızalı mı? Hemen Arayın!</h2>
+      <p>7/24 acil klima servisi için tek bir telefon yeterli. Ücretsiz keşif ve fiyat teklifi alın.</p>
+      <div class="cta-buttons">
+        <a href="tel:+905522468299" class="btn btn-primary" style="background: white; color: var(--primary);">📞 0552 246 82 99</a>
+        <a href="https://wa.me/905522468299" class="btn btn-outline" target="_blank" rel="noopener">💬 WhatsApp ile Yazın</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="iletisim">
+    <div class="container">
+      <div class="section-header">
+        <div class="label">İletişim</div>
+        <h2>Bize Ulaşın</h2>
+        <p>Adana ve çevresinde klima servisi için bize ulaşabilirsiniz.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <h4>Telefon</h4>
+              <a href="tel:+905522468299">0552 246 82 99</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">💬</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/905522468299" target="_blank" rel="noopener">0552 246 82 99</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div>
+              <h4>E-posta</h4>
+              <a href="mailto:arslanklimateknikservis@gmail.com">arslanklimateknikservis@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <h4>Adres</h4>
+              <p>Seyhan, Adana</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div>
+              <h4>Çalışma Saatleri</h4>
+              <p>Pazartesi – Pazar: 08:00 – 22:00<br>Acil arızalar için 7/24</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            src="https://maps.google.com/maps?q=Seyhan,Adana,Turkey&output=embed"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Arslan Klima Teknik Servis Konum">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">❄</div>
+            <span>Arslan Klima Teknik Servis</span>
+          </div>
+          <p>Adana'nın güvenilir klima teknik servisi. Montaj, bakım, tamir ve gaz dolumu hizmetlerinde profesyonel çözümler sunuyoruz.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Hizmetler</h4>
+          <ul>
+            <li><a href="#hizmetler">Klima Montajı</a></li>
+            <li><a href="#hizmetler">Klima Tamiri</a></li>
+            <li><a href="#hizmetler">Klima Bakımı</a></li>
+            <li><a href="#hizmetler">Gaz Dolumu</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>İletişim</h4>
+          <ul>
+            <li><a href="tel:+905522468299">0552 246 82 99</a></li>
+            <li><a href="https://wa.me/905522468299">WhatsApp</a></li>
+            <li><a href="mailto:arslanklimateknikservis@gmail.com">E-posta</a></li>
+            <li><a href="#iletisim">Seyhan, Adana</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Arslan Klima Teknik Servis. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/905522468299" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+  <script>
+    const header = document.getElementById('header');
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => nav.classList.remove('open'));
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Arslan Klima Teknik Servis",
+    "description": "Adana'da klima montajı, bakımı, tamiri ve gaz dolumu hizmeti.",
+    "url": "https://arslanklimateknikservis.com",
+    "telephone": "+905522468299",
+    "email": "arslanklimateknikservis@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Seyhan",
+      "addressRegion": "Adana",
+      "addressCountry": "TR"
+    },
+    "openingHours": "Mo-Su 08:00-22:00",
+    "priceRange": "$$",
+    "serviceType": ["Klima Montajı", "Klima Tamiri", "Klima Bakımı", "Gaz Dolumu"]
+  }
+  </script>
 </body>
 </html>
